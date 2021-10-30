@@ -7,21 +7,21 @@ const CategoryCarousel = (props) => {
       <div>
         <div className="option-group">
           <div className="option-container">
-            {categories.map((ele, index) => {
+            {categories.map((ele) => {
               return (
                 <input
-                key={'cat_radio_'+index}
+                key={'cat_radio_'+ele.id}
                   className="option-input"
-                  id={"option-" + index}
+                  id={"option-" + ele.id}
                   type="radio"
                   name="options"
                 />
               );
             })}
 
-            {categories.map((ele, index) => {
+            {categories.map((ele) => {
               return (
-                <label key={'cat_label-'+index} className="option" htmlFor={"option-"+index}>
+                <label key={'cat_label-'+ele.id} className="option" htmlFor={"option-"+ele.id}>
                   <span className="option__indicator"></span>
                   <span className="option__label">
                     {ele.data.name}

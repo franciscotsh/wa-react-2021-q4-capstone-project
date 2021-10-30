@@ -9,6 +9,10 @@ const ProductSideFilter = () => {
   const [filters, setFilters] = useState([]);
   const [isLoading, setisLoading] = useState(true);
 
+    const simpleCategories = categories.results.reduce((accumulator, cat) => {
+      accumulator[cat.id] = cat;
+      return accumulator;
+    }, []);
   useEffect(() => {
      setTimeout(() => {
       setisLoading(false);
@@ -28,14 +32,9 @@ const ProductSideFilter = () => {
   //Update the product list to send
   //Send to the productGrid only the ones that we need
   let updateProducts = () => {
-    let productsFiltered = [];
-    filters.forEach((filter) => {
-      products.results.forEach((product) => {
-        if (product.data.category.id === filter) {
-          productsFiltered.push(product);
-        }
-      });
-    });
+    let productsFiltered =  products.results.filter(ele=>{
+      return filters.includes(ele.data.category.id)
+    })
     productsFiltered =
       filters.length > 0 ? [...new Set(productsFiltered)] : products.results;
 
@@ -70,7 +69,7 @@ const ProductSideFilter = () => {
       <div className="gridContent">
         <ProductGrid
           products={productsToShow}
-          categories={categories.results}
+          categories={simpleCategories}
           pagination={true}
         ></ProductGrid>
       </div>
