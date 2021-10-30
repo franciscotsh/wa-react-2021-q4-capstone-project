@@ -10,7 +10,7 @@ const CategoryCarousel = (props) => {
             {categories.map((ele, index) => {
               return (
                 <input
-                key={index}
+                key={'cat_radio_'+index}
                   className="option-input"
                   id={"option-" + index}
                   type="radio"
@@ -21,7 +21,7 @@ const CategoryCarousel = (props) => {
 
             {categories.map((ele, index) => {
               return (
-                <label key={index}className="option" htmlFor={"option-"+index}>
+                <label key={'cat_label-'+index} className="option" htmlFor={"option-"+index}>
                   <span className="option__indicator"></span>
                   <span className="option__label">
                     {ele.data.name}

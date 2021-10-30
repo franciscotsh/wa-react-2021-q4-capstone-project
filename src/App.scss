@@ -1,6 +1,7 @@
 $color-1: #f2f2ee;
 $color-2: #bfb195;
 $color-3: #3c363a;
+$red: #b35757;
 html {
   font-size: 62.5%;
   font-family: sans-serif;
@@ -22,8 +23,9 @@ ul {
   background: $color-1;
   display: flex;
   align-items: center;
-  height: clamp(6rem, 8vw, 8rem);
-  position: sticky;
+  height: clamp(5rem, 7vw, 7rem);
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 9999;
   padding: 0 2rem;
@@ -105,11 +107,34 @@ ul {
 }
 
 footer {
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 100%;
-  height: 80px;
   background: linear-gradient(0deg, rgb(62 1 15 / 94%) 0%, #b35757 100%);
   text-align: center;
   color: white;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  background-color: white; 
+  color: black; 
+  border: 2px solid $red;
+
+
+&:hover {
+  background-color: $red;
+  color: white;
+}
 }

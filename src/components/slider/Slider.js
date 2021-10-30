@@ -82,7 +82,8 @@ const Slider = (props) => {
       <div style={{ textAlign: "center" }}>
         {slides.map((element, index) => {
           return (
-            <span key={index}
+            <span
+              key={index}
               className="dot"
               onClick={(e) => {
                 currentSlide(index + 1);

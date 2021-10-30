@@ -1,11 +1,12 @@
 import React from "react";
 
-const Navheader = () => {
+const Navheader = (props) => {
   return (
-    <div>
+    <div style={{paddingBottom:"5%"}}>
       <nav className="nav">
         <span className="nav__brand">
           <img
+            onClick={() => props.changeHome(true)}
             src="https://c.na211.content.force.com/servlet/servlet.ImageServer?id=0150L00000B0A2dQAF&oid=00DE0000000c48tMAA"
             alt="logo"
           />
@@ -18,10 +19,11 @@ const Navheader = () => {
         </div>
         <ul className="nav__list">
           <li>
-            <span >
-              <img 
-                src="https://img.icons8.com/material-two-tone/24/000000/shopping-cart--v1.png" 
-                alt="carLogo"/>
+            <span>
+              <img
+                src="https://img.icons8.com/material-two-tone/24/000000/shopping-cart--v1.png"
+                alt="carLogo"
+              />
             </span>
           </li>
         </ul>

@@ -68,8 +68,8 @@
 }
 
 .img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .el-wrapper:hover .img {
@@ -168,13 +168,13 @@
 }
 
 .info-inner .p-name {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 18px;
   color: #252525;
 }
 
 .info-inner .p-company {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   color: #8c8c8c;
@@ -194,7 +194,7 @@
   position: absolute;
   width: 100%;
   bottom: -20px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   color: #828282;
   opacity: 0;
 }
@@ -210,7 +210,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
 }
 
@@ -270,4 +270,23 @@
   letter-spacing: 0.045em;
   text-transform: uppercase;
   white-space: nowrap;
+}
+
+.pagination {
+  display: inline-block;
+  span {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    &.active {
+      background-color: #b35757;
+      color: white;
+      border-radius: 5px;
+      &:hover:not(.active) {
+        background-color: #ddd;
+        border-radius: 5px;
+      }
+    }
+  }
 }
